@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Platform } from 'react-native';
 
 const API_URL = Platform.OS === 'android'
-  ? 'http://192.168.29.145:5050/api' : 'http://localhost:5050/api';
+  ? 'https://todobackend-lfr1.onrender.com/api' : 'https://todobackend-lfr1.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
