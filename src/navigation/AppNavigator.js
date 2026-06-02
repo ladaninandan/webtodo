@@ -29,7 +29,7 @@ function MainTabs() {
           borderTopColor: '#E2E8F0',
           elevation: 0,
           shadowOpacity: 0,
-          height: 60,
+          height: 75,
           paddingBottom: 8,
         },
         tabBarLabelStyle: {
