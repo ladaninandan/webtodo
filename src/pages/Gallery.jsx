@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { observer } from 'mobx-react-lite';
-import { Camera, Image as ImageIcon, Grid, List, Plus, X, Trash2, ShieldAlert } from 'lucide-react';
+import { Camera, Image as ImageIcon, Grid, List, Plus, X, Trash2 } from 'lucide-react';
 import ImageCard from '../components/ImageCard';
 import { imageStore } from '../stores/ImageStore';
 
