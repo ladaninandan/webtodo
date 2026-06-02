@@ -359,10 +359,10 @@ body {
 }
 
 @media (max-width: 640px) {
-  html, body {
+  /* html, body {
     overflow: hidden;
     height: 100%;
-  }
+  } */
 
   .dashboard-app {
     flex-direction: column;
