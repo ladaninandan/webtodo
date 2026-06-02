@@ -83,13 +83,13 @@ export const ImageCard = observer(({ image, viewMode = 'grid', onPress, onEdit, 
         {(dimensionText || sizeText) && (
           <div className="meta-badges-row">
             {dimensionText && (
-              <span className="meta-badge">
+              <span className="meta-badge" title={dimensionText}>
                 <Maximize2 size={10} style={{ marginRight: '4px' }} />
                 {dimensionText}
               </span>
             )}
             {sizeText && (
-              <span className="meta-badge">
+              <span className="meta-badge" title={sizeText}>
                 <FileText size={10} style={{ marginRight: '4px' }} />
                 {sizeText}
               </span>

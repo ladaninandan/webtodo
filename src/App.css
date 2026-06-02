@@ -944,7 +944,7 @@ body {
 
 .list-image {
   width: 130px;
-  height: 120px;
+  align-self: stretch;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -1009,6 +1009,15 @@ body {
   color: var(--text-desc);
   font-weight: 600;
   border: 0.5px solid var(--border-color);
+  max-width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-width 0.3s ease;
+}
+
+.meta-badge:hover {
+  max-width: 200px;
 }
 
 .list-action-row {
