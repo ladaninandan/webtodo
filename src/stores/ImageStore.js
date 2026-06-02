@@ -11,7 +11,7 @@ class ImageStore {
   }
 
   loadMockImages() {
-    // Unsplash
+    // Beautiful default mockup images from Unsplash
     this.images = [
       {
         _id: generateId(),

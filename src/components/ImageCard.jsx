@@ -23,13 +23,13 @@ export const ImageCard = observer(({ image, viewMode = 'grid', onPress, onEdit, 
   if (viewMode === 'grid') {
     return (
       <div className="grid-card" onClick={() => onPress(image)}>
-        <img
-          src={image.uri}
-          alt={image.title}
+        <img 
+          src={image.uri} 
+          alt={image.title} 
           className="grid-image"
           loading="lazy"
         />
-
+        
         {/* Title Overlay */}
         <div className="grid-overlay" onClick={(e) => e.stopPropagation()}>
           <div className="grid-overlay-content" onClick={() => onPress(image)}>
@@ -38,15 +38,15 @@ export const ImageCard = observer(({ image, viewMode = 'grid', onPress, onEdit, 
           </div>
 
           <div className="grid-actions">
-            <button
-              onClick={() => onEdit(image)}
+            <button 
+              onClick={() => onEdit(image)} 
               className="grid-action-btn"
               title="Edit details"
             >
               <Pencil size={12} color="#FFF" />
             </button>
-            <button
-              onClick={() => onDelete(image)}
+            <button 
+              onClick={() => onDelete(image)} 
               className="grid-action-btn grid-delete-btn"
               title="Delete photo"
             >
@@ -60,9 +60,9 @@ export const ImageCard = observer(({ image, viewMode = 'grid', onPress, onEdit, 
 
   return (
     <div className="list-card" onClick={() => onPress(image)}>
-      <img
-        src={image.uri}
-        alt={image.title}
+      <img 
+        src={image.uri} 
+        alt={image.title} 
         className="list-image"
         loading="lazy"
       />
@@ -99,15 +99,15 @@ export const ImageCard = observer(({ image, viewMode = 'grid', onPress, onEdit, 
 
         {/* Actions bottom row */}
         <div className="list-action-row">
-          <button
-            onClick={() => onEdit(image)}
+          <button 
+            onClick={() => onEdit(image)} 
             className="list-btn list-edit-btn"
           >
             <Pencil size={12} />
             <span>Edit</span>
           </button>
-          <button
-            onClick={() => onDelete(image)}
+          <button 
+            onClick={() => onDelete(image)} 
             className="list-btn list-delete-btn"
           >
             <Trash2 size={12} />
