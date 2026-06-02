@@ -1,8 +1,9 @@
 import React from 'react';
+import { observer } from 'mobx-react-lite';
 import { Pencil, Trash2, Maximize2, FileText } from 'lucide-react';
 import { formatDate } from '../utils/helpers';
 
-export default function ImageCard({ image, viewMode = 'grid', onPress, onEdit, onDelete }) {
+export const ImageCard = observer(({ image, viewMode = 'grid', onPress, onEdit, onDelete }) => {
   // Parse metadata
   let parsedMetadata = {};
   try {
@@ -116,4 +117,6 @@ export default function ImageCard({ image, viewMode = 'grid', onPress, onEdit, o
       </div>
     </div>
   );
-}
+});
+
+export default ImageCard;

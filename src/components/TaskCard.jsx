@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react-lite';
 import { Edit2, Trash2 } from 'lucide-react';
 
 const PRIORITY_COLOR = {
@@ -31,7 +32,7 @@ const STATUS_COLOR = {
   done: '#15803D',
 };
 
-export default function TaskCard({ task, onStatusChange, onEdit, onDelete }) {
+export const TaskCard = observer(({ task, onStatusChange, onEdit, onDelete }) => {
   return (
     <div className="task-card">
       {/* Priority Stripe */}
@@ -101,4 +102,6 @@ export default function TaskCard({ task, onStatusChange, onEdit, onDelete }) {
       </div>
     </div>
   );
-}
+});
+
+export default TaskCard;
