@@ -65,15 +65,15 @@ export const Documents = observer(() => {
 
       {/* Screen Header */}
       <div className="page-header">
-        <div>
+        <div style={{ minWidth: 0, flex: 1, marginRight: '12px' }}>
           <h1 className="page-title" style={{ display: 'none' }}>Document Vault</h1> {/* Handled by Dashboard Header */}
-          <span className="page-subtitle" style={{ marginTop: '0px' }}>
+          <span className="page-subtitle" style={{ marginTop: '0px', display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={`${pdfStore.pdfs.length} PDF documents stored in-memory`}>
             {pdfStore.pdfs.length} PDF documents stored in-memory
           </span>
         </div>
-        <button className="btn-primary" onClick={() => fileInputRef.current?.click()}>
-          <Plus size={16} style={{ marginRight: '6px' }} />
-          Upload PDF
+        <button className="btn-primary upload-btn" onClick={() => fileInputRef.current?.click()} title="Upload PDF">
+          <Plus size={16} style={{ marginRight: '6px', flexShrink: 0 }} />
+          <span className="btn-text">Upload PDF</span>
         </button>
       </div>
 

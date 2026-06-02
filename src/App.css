@@ -225,6 +225,9 @@ body {
   justify-content: space-between;
   padding: 0 30px;
   flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .context-title {
@@ -356,8 +359,14 @@ body {
 }
 
 @media (max-width: 640px) {
+  html, body {
+    overflow: hidden;
+    height: 100%;
+  }
+
   .dashboard-app {
     flex-direction: column;
+    height: 100%;
   }
 
   .sidebar {
@@ -393,7 +402,7 @@ body {
   }
 
   .dashboard-main {
-    height: calc(100vh - 60px);
+    height: calc(100% - 60px);
   }
 
   .dashboard-content {
@@ -402,6 +411,11 @@ body {
 
   .main-header {
     padding: 0 16px;
+  }
+
+  /* Mobile override for the Upload PDF button */
+  .upload-btn {
+    max-width: 110px;
   }
 }
 
@@ -461,6 +475,23 @@ body {
 
 .btn-primary:active {
   transform: translateY(0);
+}
+
+.upload-btn {
+  min-width: 0;
+  max-width: 145px;
+  flex-shrink: 0;
+  transition: max-width 0.3s ease;
+}
+
+.upload-btn:hover {
+  max-width: 200px;
+}
+
+.upload-btn .btn-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-secondary {
