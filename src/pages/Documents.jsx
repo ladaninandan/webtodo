@@ -19,7 +19,7 @@ export const Documents = observer(() => {
     const reader = new FileReader();
     reader.onload = (event) => {
       const base64Uri = event.target.result;
-      
+
       pdfStore.addPdf({
         name: file.name || 'document.pdf',
         uri: base64Uri,
@@ -34,7 +34,9 @@ export const Documents = observer(() => {
 
   const handleDownload = (pdf) => {
     try {
+      //Create Link
       const link = document.createElement('a');
+      // Set File Data
       link.href = pdf.uri;
       link.download = pdf.name;
       document.body.appendChild(link);
@@ -127,8 +129,8 @@ export const Documents = observer(() => {
             <p className="empty-hint">
               Upload PDF blueprints or manuals to test robust in-memory local files vaults.
             </p>
-            <button 
-              className="btn-secondary" 
+            <button
+              className="btn-secondary"
               style={{ marginTop: '16px', padding: '10px 20px' }}
               onClick={() => fileInputRef.current?.click()}
             >
